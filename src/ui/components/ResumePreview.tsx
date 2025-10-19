@@ -19,13 +19,13 @@ const templateStyles: Record<string, {
   contact: string
 }> = {
   professional: {
-    container: 'rounded-3xl shadow-lg',
-    header: 'px-10 py-10 border-b border-slate-200 bg-gradient-to-br from-white to-slate-50',
+    container: 'rounded-xl shadow-md border border-slate-200', // Cleaner border, less shadow/rounding
+    header: 'px-10 py-10 border-b border-slate-200 bg-white', // Removed gradient, plain white
     name: 'text-4xl font-extrabold tracking-tight',
     title: 'text-sm text-slate-500 mt-1',
-    section: 'px-10 py-8 grid gap-10',
+    section: 'px-10 py-8 grid gap-8', // Reduced gap for a tighter look
     sectionTitle: 'text-sm uppercase tracking-wider font-semibold',
-    card: 'p-4 rounded-xl border border-slate-200',
+    card: 'p-4 rounded-xl border border-slate-200', // Kept this consistent
     contact: 'mt-4 flex flex-wrap gap-x-6 gap-y-1 text-sm text-slate-600'
   },
   minimal: {
@@ -161,5 +161,3 @@ function BadgeVerified() {
     </span>
   )
 }
-
-

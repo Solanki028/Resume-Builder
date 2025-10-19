@@ -1,3 +1,10 @@
+/*
+ * NOTE: This file is no longer used by App.tsx.
+ * The "Theme" logic has been moved into the 'template' step of Editor.tsx.
+ * The "Header" and "Contact" fields are already handled by the 'basic' step of Editor.tsx.
+ * You can safely delete this file.
+*/
+
 // import React from 'react'
 import { useResume } from '../context/ResumeContext'
 
@@ -82,5 +89,3 @@ export function CustomizationPanel(): React.ReactElement {
 }
 
 function dEq<T>(a: T, b: T): boolean { return a === b }
-
-

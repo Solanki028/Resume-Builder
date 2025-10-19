@@ -130,16 +130,39 @@ export function Editor() {
           />
         )}
 
+        {/* --- UPDATED TEMPLATE STEP --- */}
         {active === 'template' && (
-          <div className="grid gap-4">
-            <span className="text-xs font-medium text-slate-700">Template</span>
-            <div className="grid grid-cols-3 gap-2">
-              {(['professional','minimal','creative'] as const).map(t => (
-                <button key={t} onClick={() => setData(d => ({ ...d, template: t }))} className={`px-3 py-2 rounded-lg text-xs border ${data.template===t? 'bg-slate-900 text-white':'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'}`}>{t}</button>
-              ))}
+          <div className="grid gap-6">
+            {/* 1. The Template Selector */}
+            <div>
+              <p className="text-xs uppercase tracking-wider font-semibold text-slate-700">Template</p>
+              <div className="mt-3 grid grid-cols-3 gap-2">
+                {(['professional','minimal','creative'] as const).map(t => (
+                  <button key={t} onClick={() => setData(d => ({ ...d, template: t }))} className={`px-3 py-2 rounded-lg text-xs border ${data.template===t? 'bg-slate-900 text-white':'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'}`}>{t}</button>
+                ))}
+              </div>
+            </div>
+        
+            {/* 2. The Theme Selector (Moved from CustomizationPanel.tsx) */}
+            <div>
+              <p className="text-xs uppercase tracking-wider font-semibold text-slate-700">Theme Color</p>
+              <div className="mt-3 grid grid-cols-4 gap-2">
+                {(['slate', 'emerald', 'indigo', 'rose'] as const).map((t) => (
+                  <button
+                    key={t}
+                    onClick={() => setData((d) => ({ ...d, theme: t }))}
+                    className={`px-2 py-1 rounded-lg text-xs border border-slate-200 transition ${
+                      dEq(data.theme, t) ? 'bg-slate-900 text-white' : 'bg-white text-slate-700 hover:bg-slate-50'
+                    }`}
+                  >
+                    {t}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         )}
+        {/* --- END UPDATED TEMPLATE STEP --- */}
 
         <div className="mt-6 flex items-center justify-between">
           <button onClick={goBack} className="px-3 py-2 text-xs rounded-lg border border-slate-200 hover:bg-slate-50 disabled:opacity-40" disabled={active === 'basic'}>
@@ -268,3 +291,5 @@ function Collection<T>(props: {
   )
 }
 
+// --- HELPER FUNCTION ADDED ---
+function dEq<T>(a: T, b: T): boolean { return a === b }

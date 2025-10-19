@@ -23,13 +23,25 @@ export function App() {
           </div>
         </header>
 
-        <main className="mx-auto max-w-5xl px-6 py-8 grid gap-6">
-          <ResumePreview />
-          <Editor />
+        {/* --- UPDATED MAIN LAYOUT --- */}
+        {/* This creates a 2-column grid on large screens (lg:) and stacks them on mobile.
+          The editor (col-span-1) is sticky so it stays in place while you scroll the preview.
+        */}
+        <main className="mx-auto max-w-7xl px-6 py-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="lg:col-span-1">
+            {/* Make the editor sticky within its column */}
+            <div className="sticky top-24">
+              <Editor />
+            </div>
+          </div>
+
+          <div className="lg:col-span-2">
+            <ResumePreview />
+          </div>
         </main>
+        {/* --- END UPDATED MAIN LAYOUT --- */}
+
       </div>
     </ResumeProvider>
   )
 }
-
-
