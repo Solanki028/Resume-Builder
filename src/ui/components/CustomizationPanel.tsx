@@ -1,7 +1,7 @@
-import React from 'react'
+// import React from 'react'
 import { useResume } from '../context/ResumeContext'
 
-export function CustomizationPanel(): JSX.Element {
+export function CustomizationPanel(): React.ReactElement {
   const { data, setData } = useResume()
 
   return (
@@ -82,6 +82,5 @@ export function CustomizationPanel(): JSX.Element {
 }
 
 function dEq<T>(a: T, b: T): boolean { return a === b }
-
 
 

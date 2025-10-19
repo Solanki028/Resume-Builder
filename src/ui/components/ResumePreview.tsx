@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { useResume } from '../context/ResumeContext'
 
 const themeToClasses: Record<string, { accent: string; chip: string; border: string }> = {
@@ -161,6 +161,5 @@ function BadgeVerified() {
     </span>
   )
 }
-
 
 

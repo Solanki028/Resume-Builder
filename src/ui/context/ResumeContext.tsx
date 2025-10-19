@@ -92,11 +92,10 @@ const SAMPLE: ResumeData = {
   template: 'professional'
 }
 
-export function ResumeProvider(props: { children: React.ReactNode }): JSX.Element {
+export function ResumeProvider(props: { children: React.ReactNode }): React.ReactElement {
   const [data, setData] = useState<ResumeData>(SAMPLE)
   const value = useMemo(() => ({ data, setData }), [data])
   return <ResumeContext.Provider value={value}>{props.children}</ResumeContext.Provider>
 }
-
 
 

@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { ResumeProvider } from './context/ResumeContext'
 import { ResumePreview } from './components/ResumePreview'
 import { Editor } from './components/Editor'
@@ -31,6 +31,5 @@ export function App() {
     </ResumeProvider>
   )
 }
-
 
 
