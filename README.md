@@ -52,9 +52,4 @@ Follow these instructions to get a copy of the project up and running on your lo
 Prerequisites
 You must have Node.js (v18 or newer) and npm installed on your machine.
 
-Installation & Setup
-Clone the repository:
 
-Bash
-
-git clone
