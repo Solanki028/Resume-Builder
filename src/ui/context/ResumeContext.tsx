@@ -54,7 +54,7 @@ export function useResume(): ResumeContextValue {
 }
 
 const SAMPLE: ResumeData = {
-  name: 'Priyanshu Sharma',
+  name: 'Priyanshu Solanki',
   title: 'Full-Stack Developer',
   about:
     'Passionate about building connected learning ecosystems. Focused on delightful UX and robust engineering.',
